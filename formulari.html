@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Formulari Eduardpafe</title>
+        <link rel="stylesheet" href="stle.css" />
+    </head>
+    <body>
+        <h1>FORMULARI</h1>
+
+        <form action="resultat.html" method="GET">
+            <fieldset>
+                <legend>Dades de contacte</legend>
+                <label>Tractament:</label>
+                            <input type="radio" name="tractament" value="Sr.">Sr.
+                            <input type="radio" name="tractament" value="Sra.">Sra.
+                <br>
+                <label for="nomformulari">Nom: </label> <input type="text" name="nom" id="nomformulari" value="" placeholder="Nom" required>
+                <label for="cognomformulari">Cognom: </label> <input type="text" name="cognom" id="cognomformulari" value="" placeholder="Cognom">
+                <br>
+                <label for="dniformulari">DNI: </label> <input type="text" name="dni" id="dniformulari" value="" placeholder="DNI" pattern="(((\d{8})([-]?)([A-Z]{1})|(((\d{8})([-]?)([a-z]{1})">
+                <br>
+                <label for="correuformulari">Correu electrònic: </label> <input type="email" name="correu" id="correuformulari" value="" placeholder="e-mail">
+                <br>
+                <label for="contrasenyaformulari">Contrasenya: </label> <input type="password" name="contrasenya" id="contrasenyaformulari" value="" placeholder="Contrasenya" pattern="(^[0-9]{1}{a-zA-z0-9}[A-Z]$){8,20}">
+                <br>
+                <label for="confirmarcontrasenyaformulari">Confirmar contrasenya: </label> <input type="password" name="validaciocontrasenya" id="confirmarcontrasenyaformulari" value="" placeholder="Contrasenya">
+                <br>
+                <label for="datanaixementformulari">Data naixement: </label><input type="date" name="datanaixement" id="datanaixementformulari">
+                <br>
+                <label for="telefonformulari">Telèfon: </label><input type="text" name="telefon" id="telefonformulari" value="" placeholder="Telèfon" pattern="[0-9]{9}">
+                <br><br>
+                <label for="checkboxformulari">He llegit i estic d’acord amb les condicions del servei </label>
+                <input type="checkbox" name="checkbox" id="checkboxformulari" required>
+                <br>
+                <input type="submit" name="Enviar">
+            </fieldset>
+        </form>        
+
+        <form action="resultat.html" method="GET">
+            <fieldset>
+                <legend>Enviament</legend>
+                <label for="carrerformulari">Carrer: </label> <input type="text" name="carrer" id="carrerformulari" value="" placeholder="Carrer">
+                <br>
+                <label for="codipostalformulari">Codi postal: </label> <input type="text" name="codipostal" id="codipostalformulari" value="" placeholder="Codi postal" pattern="[0-9]{5}">
+                <br>
+                <label for="localitatformulari">Localitat: </label> <input type="textarea" name="localitat" id="localitatformulari" value="" placeholder="Localitat" rows="6" cols="40">
+                <label for="paisformulari">País: </label> <input type="text" name="pais" id="paisformulari" placeholder="País" list="pais">
+                    <datalist id="pais">
+                        <option value="Catalunya"></option>
+                        <option value="Espanya"></option>
+                    </datalist>
+            </fieldset>
+        </form>
+
+        <form action="resultat.html" method="GET">
+            <fieldset>
+                <legend>Transportista</legend>
+                <select name="desplegable">
+                    <option value="companyia1">UPS</option>
+                    <option value="companyia2">Correus</option>
+                    <option value="companyia3">Una altra companyia de transport</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <form action="resultat.html" method="GET">
+            <fieldset>
+                <legend>Observacions</legend>
+                <textarea name="observacions" cols="50" rows="5" maxlength="100" placeholder="Observacions"></textarea>
+            </fieldset>
+        </form>
+
+        
+
+    </body>
+</html>
